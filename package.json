@@ -1,0 +1,13 @@
+{
+  "name": "mixins",
+  "version": "1.0.0",
+  "description": "LESS Mixins",
+  "author": "Alexey Neretin",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-concat": "^2.4.1",
+    "gulp-header": "^1.2.2",
+    "gulp-watch": "^1.1.0"
+  }
+}

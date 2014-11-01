@@ -1,0 +1,35 @@
+﻿//  ----------------------------------------------------------------------- //
+//  Border
+//  ----------------------------------------------------------------------- //
+.border-radius(@topLeft: 0, @topRight: 0, @bottomRight: 0, @bottomLeft: 0) {
+	-webkit-border-top-left-radius: @topLeft;
+	    -moz-border-radius-topleft: @topLeft;
+	        border-top-left-radius: @topLeft;
+	-webkit-border-top-right-radius: @topRight;
+	    -moz-border-radius-topright: @topRight;
+	    border-top-right-radius: @topRight;
+	-webkit-border-bottom-right-radius: @bottomRight;
+	    -moz-border-radius-bottomright: @bottomRight;
+	        border-bottom-right-radius: @bottomRight;
+	-webkit-border-bottom-left-radius: @bottomLeft;
+	    -moz-border-radius-bottomleft: @bottomLeft;
+	        border-bottom-left-radius: @bottomLeft;
+	-webkit-background-clip: padding-box;
+       -moz-background-clip: padding;    
+            background-clip: padding-box;
+}
+
+.bordered(@color: #eee, @width: 1px) {
+	border: @width solid @color;
+}
+
+.rounded (@radius: 5px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;    
+            background-clip: padding-box;
+}
+
+

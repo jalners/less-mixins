@@ -1,0 +1,56 @@
+﻿//  ----------------------------------------------------------------------- //
+//  Transform
+//  ----------------------------------------------------------------------- //
+.transform(@transform) {
+	-webkit-transform: @transform;
+	   -moz-transform: @transform;
+	    -ms-transform: @transform;
+	     -o-transform: @transform;
+	        transform: @transform;
+}
+
+.rotate(@deg) {
+	.transform(rotate(@deg));
+}
+
+.scale(@ratio) {
+	.transform(scale(@ratio));
+}
+
+.scale(@ratioX, @ratioY) {
+	.transform(scale(@ratioX, @ratioY));
+}
+
+.scaleX(@ratio) {
+	.transform(scaleX(@ratio));
+}
+
+.scaleY(@ratio) {
+	.transform(scaleY(@ratio));
+}
+
+.skewX(@deg) {
+	.transform(skewX(@deg));
+}
+
+.skewY(@deg) {
+	.transform(skewY(@deg));
+}
+
+.translate(@ratio) {
+	.transform(translate(@ratio));
+}
+
+.translate(@ratioX, @ratioY) {
+	.transform(translate(@ratioX, @ratioY));
+}
+
+.translateX(@ratio) {
+	.transform(translateX(@ratio));
+}
+
+.translateY(@ratio) {
+	.transform(translateY(@ratio));
+}
+
+

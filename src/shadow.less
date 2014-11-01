@@ -1,0 +1,22 @@
+﻿//  ----------------------------------------------------------------------- //
+//  Shadow
+//  ----------------------------------------------------------------------- //
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
+	        box-shadow: @shadow;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+	-webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	   -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	        box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.outer-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.1) {
+	-webkit-box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	   -moz-box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	        box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+

@@ -1,0 +1,19 @@
+﻿//  ----------------------------------------------------------------------- //
+//  Size and position
+//  ----------------------------------------------------------------------- //
+.size(@width, @height) {
+	width: @width;
+	height: @height;
+}
+
+.square(@size) {
+	.size(@size, @size);
+}
+
+.center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+

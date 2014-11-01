@@ -1,0 +1,46 @@
+﻿//  ----------------------------------------------------------------------- //
+//  Transition
+//  ----------------------------------------------------------------------- //
+.transition(@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+	     -o-transition: @transition;
+	        transition: @transition;
+}
+
+.transition-all(@duration: 0.2s, @timing-function: ease-out) {
+	-webkit-transition: all @duration @timing-function;
+	   -moz-transition: all @duration @timing-function;
+	     -o-transition: all @duration @timing-function;
+	        transition: all @duration @timing-function;
+}
+
+.transition-property(@property) {
+	-webkit-transition-property: @property;
+	   -moz-transition-property: @property;
+	     -o-transition-property: @property;
+	        transition-property: @property;
+}
+
+.transition-duration(@duration: 0.2s) {
+	-webkit-transition-duration: @duration;
+	   -moz-transition-duration: @duration;
+	     -o-transition-duration: @duration;
+	        transition-duration: @duration;
+}
+
+.transition-timing-function(@timing-function) {
+	-webkit-transition-timing-function: @timing-function;
+	   -moz-transition-timing-function: @timing-function;
+	     -o-transition-timing-function: @timing-function;
+	        transition-timing-function: @timing-function;
+}
+
+.transition-delay(@delay) {
+	-webkit-transition-delay: @delay;
+	   -moz-transition-delay: @delay;
+	     -o-transition-delay: @delay;
+	        transition-delay: @delay;
+}
+
+

@@ -1,0 +1,343 @@
+/**
+ * LESS Mixins
+ * Version v1.0.0
+ * Copyright 2014 Alexey Neretin
+ * Licensed under the MIT license
+ */
+
+//  ----------------------------------------------------------------------- //
+//  Animation
+//  ----------------------------------------------------------------------- //
+.animation(@animation) {
+	-webkit-animation: @animation;
+	   -moz-animation: @animation;
+	     -o-animation: @animation;
+	        animation: @animation;
+}
+
+.animation-name(@name) {
+	-webkit-animation-name: @name;
+	   -moz-animation-name: @name;
+	     -o-animation-name: @name;
+	        animation-name: @name;
+}
+
+.animation-duration(@duration) {
+	-webkit-animation-duration: @duration;
+	   -moz-animation-duration: @duration;
+	     -o-animation-duration: @duration;
+	        animation-duration: @duration;
+}
+
+.animation-timing-function(@timing-function) {
+	-webkit-animation-timing-function: @timing-function;
+	   -moz-animation-timing-function: @timing-function;
+	     -o-animation-timing-function: @timing-function;
+	        animation-timing-function: @timing-function;
+}
+
+.animation-delay(@delay) {
+	-webkit-animation-delay: @delay;
+	   -moz-animation-delay: @delay;
+	     -o-animation-delay: @delay;
+	        animation-delay: @delay;
+}
+
+.animation-iteration-count(@iteration-count) {
+	-webkit-animation-iteration-count: @iteration-count;
+	   -moz-animation-iteration-count: @iteration-count;
+	     -o-animation-iteration-count: @iteration-count;
+	        animation-iteration-count: @iteration-count;
+}
+.animation-direction(@direction) {
+	-webkit-animation-direction: @direction;
+	   -moz-animation-direction: @direction;
+	     -o-animation-direction: @direction;
+	        animation-direction: @direction;
+}
+.animation-fill-mode(@fill-mode) {
+	-webkit-animation-fill-mode: @fill-mode;
+	   -moz-animation-fill-mode: @fill-mode;
+	     -o-animation-fill-mode: @fill-mode;
+	        animation-fill-mode: @fill-mode;
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Border
+//  ----------------------------------------------------------------------- //
+.border-radius(@topLeft: 0, @topRight: 0, @bottomRight: 0, @bottomLeft: 0) {
+	-webkit-border-top-left-radius: @topLeft;
+	    -moz-border-radius-topleft: @topLeft;
+	        border-top-left-radius: @topLeft;
+	-webkit-border-top-right-radius: @topRight;
+	    -moz-border-radius-topright: @topRight;
+	    border-top-right-radius: @topRight;
+	-webkit-border-bottom-right-radius: @bottomRight;
+	    -moz-border-radius-bottomright: @bottomRight;
+	        border-bottom-right-radius: @bottomRight;
+	-webkit-border-bottom-left-radius: @bottomLeft;
+	    -moz-border-radius-bottomleft: @bottomLeft;
+	        border-bottom-left-radius: @bottomLeft;
+	-webkit-background-clip: padding-box;
+       -moz-background-clip: padding;    
+            background-clip: padding-box;
+}
+
+.bordered(@color: #eee, @width: 1px) {
+	border: @width solid @color;
+}
+
+.rounded (@radius: 5px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;    
+            background-clip: padding-box;
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Gradient
+//  ----------------------------------------------------------------------- //
+.gradient-v (@startColor: #eee, @endColor: #fff) {
+	background: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(top, @startColor 0%,@endColor 100%);
+	background: -moz-linear-gradient(top, @startColor 0%, @endColor 100%);
+	background: -ms-linear-gradient(top,  @startColor 0%, @endColor 100%);
+	background: -o-linear-gradient(top, @startColor 0%, @endColor 100%);
+	background: linear-gradient(to bottom, @startColor 0%, @endColor 100%);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor));
+}
+
+.gradient-h (@startColor: #eee, @endColor: #fff) {
+	background: @startColor;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(left, @startColor 0%,@endColor 100%);
+	background: -moz-linear-gradient(left, @startColor 0%, @endColor 100%);
+	background: -ms-linear-gradient(left,  @startColor 0%, @endColor 100%);
+	background: -o-linear-gradient(left, @startColor 0%, @endColor 100%);
+	background: linear-gradient(to right, @startColor 0%, @endColor 100%);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor));
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Shadow
+//  ----------------------------------------------------------------------- //
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
+	        box-shadow: @shadow;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+	-webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	   -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	        box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.outer-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.1) {
+	-webkit-box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	   -moz-box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	        box-shadow: @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Size and position
+//  ----------------------------------------------------------------------- //
+.size(@width, @height) {
+	width: @width;
+	height: @height;
+}
+
+.square(@size) {
+	.size(@size, @size);
+}
+
+.center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Transform
+//  ----------------------------------------------------------------------- //
+.transform(@transform) {
+	-webkit-transform: @transform;
+	   -moz-transform: @transform;
+	    -ms-transform: @transform;
+	     -o-transform: @transform;
+	        transform: @transform;
+}
+
+.rotate(@deg) {
+	.transform(rotate(@deg));
+}
+
+.scale(@ratio) {
+	.transform(scale(@ratio));
+}
+
+.scale(@ratioX, @ratioY) {
+	.transform(scale(@ratioX, @ratioY));
+}
+
+.scaleX(@ratio) {
+	.transform(scaleX(@ratio));
+}
+
+.scaleY(@ratio) {
+	.transform(scaleY(@ratio));
+}
+
+.skewX(@deg) {
+	.transform(skewX(@deg));
+}
+
+.skewY(@deg) {
+	.transform(skewY(@deg));
+}
+
+.translate(@ratio) {
+	.transform(translate(@ratio));
+}
+
+.translate(@ratioX, @ratioY) {
+	.transform(translate(@ratioX, @ratioY));
+}
+
+.translateX(@ratio) {
+	.transform(translateX(@ratio));
+}
+
+.translateY(@ratio) {
+	.transform(translateY(@ratio));
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Transition
+//  ----------------------------------------------------------------------- //
+.transition(@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+	     -o-transition: @transition;
+	        transition: @transition;
+}
+
+.transition-all(@duration: 0.2s, @timing-function: ease-out) {
+	-webkit-transition: all @duration @timing-function;
+	   -moz-transition: all @duration @timing-function;
+	     -o-transition: all @duration @timing-function;
+	        transition: all @duration @timing-function;
+}
+
+.transition-property(@property) {
+	-webkit-transition-property: @property;
+	   -moz-transition-property: @property;
+	     -o-transition-property: @property;
+	        transition-property: @property;
+}
+
+.transition-duration(@duration: 0.2s) {
+	-webkit-transition-duration: @duration;
+	   -moz-transition-duration: @duration;
+	     -o-transition-duration: @duration;
+	        transition-duration: @duration;
+}
+
+.transition-timing-function(@timing-function) {
+	-webkit-transition-timing-function: @timing-function;
+	   -moz-transition-timing-function: @timing-function;
+	     -o-transition-timing-function: @timing-function;
+	        transition-timing-function: @timing-function;
+}
+
+.transition-delay(@delay) {
+	-webkit-transition-delay: @delay;
+	   -moz-transition-delay: @delay;
+	     -o-transition-delay: @delay;
+	        transition-delay: @delay;
+}
+
+
+
+//  ----------------------------------------------------------------------- //
+//  Common
+//  ----------------------------------------------------------------------- //
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	   -moz-box-sizing: @type;
+	        box-sizing: @type;
+}
+
+.clear-fix() {
+	*zoom: 1;
+
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.hide() {
+	display: none !important;
+}
+
+.show() {
+	display: block !important;
+}
+
+.inline-block() {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.opacity(@opacity: 0.5) {
+	-webkit-opacity: @opacity;
+	   -moz-opacity: @opacity;
+		    opacity: @opacity;
+	@opperc: @opacity * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+	    filter: ~"alpha(opacity=@{opperc})";
+}
+
+.user-select(@select: none) {
+	-webkit-user-select: @select;
+	   -moz-user-select: @select;
+	    -ms-user-select: @select;
+	     -o-user-select: @select;
+	        user-select: @select;
+}
+
+.placeholder(@color) {
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+}
